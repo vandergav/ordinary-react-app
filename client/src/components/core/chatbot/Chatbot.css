@@ -1,0 +1,27 @@
+.chatbot-body {
+  height: 500px;
+  width: 400px;
+  bottom: 0;
+  right: 0;
+  float: right;
+  border: 1px solid lightblue;
+}
+
+/* .chatbot-messages {
+  height: '100%';
+  width: '100%';
+  background-color: 'white';
+  overflow: 'auto';
+}
+
+.chatbot-messages-bottom {
+  float: 'left';
+  clear: 'both';
+}
+
+.chatbot-text-input {
+  margin: 0;
+  padding-left: '1%';
+  padding-right: '1%';
+  width: '98%';
+} */
