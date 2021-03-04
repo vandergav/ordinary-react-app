@@ -6,22 +6,29 @@ import Login from './Login';
 import AccountDetails from './AccountDetails';
 import TransactionHistory from './TransactionHistory';
 import AddTransaction from './AddTransaction';
+import Chatbot from './core/chatbot/Chatbot';
 
 const App = () => {
   const routes = (
-    <Switch>
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/">
-        <Redirect to="/login" />
-      </Route>
-      <PrivateRoute exact path="/home/:id" component={AccountDetails} />
-      <PrivateRoute
-        exact
-        path="/transactionhistory"
-        component={TransactionHistory}
-      />
-      <PrivateRoute exact path="/addtransaction" component={AddTransaction} />
-    </Switch>
+    <>
+      <Switch>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/">
+          <Redirect to="/login" />
+        </Route>
+        <PrivateRoute exact path="/home/:id" component={AccountDetails} />
+        <PrivateRoute
+          exact
+          path="/transactionhistory"
+          component={TransactionHistory}
+        />
+        <PrivateRoute exact path="/addtransaction" component={AddTransaction} />
+      </Switch>
+      <Switch>
+        <Route path="/login" />
+        <Route path="/" component={Chatbot} />
+      </Switch>
+    </>
   );
   return <BrowserRouter>{routes}</BrowserRouter>;
 };

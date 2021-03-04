@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import Navbar from './core/Navbar';
 import Extend from './core/Extend';
-import Chatbot from './core/chatbot/Chatbot';
+// import Chatbot from './core/chatbot/Chatbot';
 
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
@@ -84,7 +84,7 @@ export default class AccountDetails extends Component {
                 ))}
               </tbody>
             </Table>
-            <Chatbot />
+            {/* <Chatbot /> */}
           </Container>
         </Jumbotron>
       </>

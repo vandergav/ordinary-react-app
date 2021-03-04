@@ -19,7 +19,7 @@ import Datetime from 'react-datetime';
 
 import Navbar from './core/Navbar';
 import Extend from './core/Extend';
-import Chatbot from './core/chatbot/Chatbot';
+// import Chatbot from './core/chatbot/Chatbot';
 
 import { PatchQuestionFill } from 'react-bootstrap-icons';
 import { ExclamationCircleFill } from 'react-bootstrap-icons';
@@ -409,7 +409,7 @@ export default class AddTransaction extends Component {
                 </Form>
               </div>
             </div>
-            <Chatbot />
+            {/* <Chatbot /> */}
           </Container>
         </Jumbotron>
       </>

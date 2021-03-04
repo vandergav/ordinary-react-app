@@ -48,51 +48,60 @@ export default class Login extends Component {
   };
 
   loginForm = () => (
-    <Form className="text-center" onSubmit={this.handleSubmit}>
-      <Form.Row className="justify-content-sm-center">
-        <Form.Group as={Col} sm="4">
-          <Form.Label className="lead">Username</Form.Label>
-          <InputGroup>
-            <InputGroup.Prepend>
-              <InputGroup.Text>
-                <Person />
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <Form.Control
-              type="text"
-              name="username"
-              onChange={this.handleChange('username')}
-              defaultValue={this.state.username}
-            ></Form.Control>
-          </InputGroup>
-        </Form.Group>
-      </Form.Row>
-      <Form.Row className="justify-content-sm-center">
-        <Form.Group as={Col} sm="4">
-          <Form.Label className="lead">Password</Form.Label>
-          <InputGroup className="mb-5">
-            <InputGroup.Prepend>
-              <InputGroup.Text>
-                <Lock />
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <Form.Control
-              type="password"
-              name="password"
-              onChange={this.handleChange('Password')}
-              defaultValue={this.state.password}
-            ></Form.Control>
-          </InputGroup>
-        </Form.Group>
-      </Form.Row>
-      <Form.Row className="justify-content-sm-center">
-        <Form.Group as={Col} md="4">
-          <Button variant="success" type="submit" className="btn-block">
-            Submit <BoxArrowRight style={{ color: 'white' }} />
-          </Button>
-        </Form.Group>
-      </Form.Row>
-    </Form>
+    <>
+      <h2 className="display-4" style={{ textAlign: 'center' }}>
+        Login
+      </h2>
+      <div className="card">
+        <div className="card-body">
+          <Form className="text-center" onSubmit={this.handleSubmit}>
+            <Form.Row className="justify-content-sm-center">
+              <Form.Group as={Col} sm="4">
+                <Form.Label className="lead">Username</Form.Label>
+                <InputGroup>
+                  <InputGroup.Prepend>
+                    <InputGroup.Text>
+                      <Person />
+                    </InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <Form.Control
+                    type="text"
+                    name="username"
+                    onChange={this.handleChange('username')}
+                    defaultValue={this.state.username}
+                  ></Form.Control>
+                </InputGroup>
+              </Form.Group>
+            </Form.Row>
+            <Form.Row className="justify-content-sm-center">
+              <Form.Group as={Col} sm="4">
+                <Form.Label className="lead">Password</Form.Label>
+                <InputGroup className="mb-5">
+                  <InputGroup.Prepend>
+                    <InputGroup.Text>
+                      <Lock />
+                    </InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <Form.Control
+                    type="password"
+                    name="password"
+                    onChange={this.handleChange('Password')}
+                    defaultValue={this.state.password}
+                  ></Form.Control>
+                </InputGroup>
+              </Form.Group>
+            </Form.Row>
+            <Form.Row className="justify-content-sm-center">
+              <Form.Group as={Col} md="4">
+                <Button variant="success" type="submit" className="btn-block">
+                  Submit <BoxArrowRight style={{ color: 'white' }} />
+                </Button>
+              </Form.Group>
+            </Form.Row>
+          </Form>
+        </div>
+      </div>
+    </>
   );
 
   render() {
